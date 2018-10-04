@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FoodApplication</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="button">Button</string>
+    <string name="email">Email</string>
+    <string name="perform">Perform</string>
+</resources>

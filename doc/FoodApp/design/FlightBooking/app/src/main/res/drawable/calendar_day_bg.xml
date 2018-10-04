@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/midle_range"
+        app:tsquare_state_range_middle="true">
+    </item>
+
+    <item android:drawable="@drawable/bg_circle_selected"
+        android:state_pressed="true">
+    </item>
+    <item android:drawable="@drawable/left_range"
+        app:tsquare_state_range_last="true">
+    </item>
+    <item android:drawable="@drawable/right_range"
+        app:tsquare_state_range_first="true">
+    </item>
+    <item android:drawable="@drawable/bg_circle_selected"
+        android:state_selected="true">
+    </item>
+    <!--<item app:tsquare_state_current_month="false">-->
+        <!--<color android:color="@color/yellow_gray" />-->
+    <!--</item>-->
+    <item app:tsquare_state_highlighted="true">
+        <color android:color="@color/calendar_highlighted_day_bg" />
+    </item>
+    <item android:drawable="@drawable/bg_circle_today"
+        app:tsquare_state_today="true">
+    </item>
+    <item>
+        <color android:color="@color/white" />
+    </item>
+
+</selector>

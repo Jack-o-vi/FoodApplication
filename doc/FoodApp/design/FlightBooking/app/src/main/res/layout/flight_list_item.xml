@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:divider="@drawable/horizontal_divider"
+        android:showDividers="middle"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/price_layout"
+            android:background="@color/colorAccent">
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="10dp">
+                <design.nxn.flightbooking.customfonts.MyTextView
+                    android:id="@+id/price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+                <design.nxn.flightbooking.customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_alignParentLeft="true"
+
+                    android:layout_marginLeft="2dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp">
+                <design.nxn.flightbooking.customfonts.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stops"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_alignParentLeft="true"/>
+                <design.nxn.flightbooking.customfonts.MyTextView
+                    android:id="@+id/stops_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="2dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/price_layout">
+
+
+            <RelativeLayout
+                android:id="@+id/from_container"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/start_shorted_country_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="DE"
+                        android:textColor="@color/dark_text"
+                        android:textSize="18sp" />
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/start_city_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="Berlin"
+                        android:textColor="@color/dark_text"
+                        android:textSize="14sp" />
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/start_airport_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="(TXL)Tegel"
+                        android:textColor="@color/dark_text"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:rotation="345"
+                            android:src="@drawable/ic_aeroplane"
+                            android:tint="@color/dark_text" />
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:text="17:25"
+                            android:textColor="@color/light_text"
+                            android:textSize="12sp"
+                            android:id="@+id/start_time_text"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/to_container"
+                android:layout_toRightOf="@+id/from_container">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorAccent" />
+
+                <LinearLayout
+                    android:id="@+id/center_1"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/gradient"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/center_2"
+                    android:layout_toRightOf="@+id/center_1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <include layout="@layout/dots" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <include layout="@layout/dots" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/center_2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/gradient"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/duration"
+                            android:textColor="@color/dark_text"
+                            android:textSize="12sp" />
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:text="8h 30m"
+                            android:textColor="@color/dark_text"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:id="@+id/duration_text"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Air Berlin"
+                            android:textColor="@color/dark_text"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:id="@+id/airline_name"/>
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:text="AB 7454"
+                            android:textColor="@color/dark_text"
+                            android:textSize="12sp"
+                            android:id="@+id/airline_code"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/to_container"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/arrive_shorted_country_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="US"
+                        android:textColor="@color/dark_text"
+                        android:textSize="18sp" />
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/arrive_city_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="New York"
+                        android:textColor="@color/dark_text"
+                        android:textSize="12sp" />
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/arrive_airport_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="(JFK)John F Kennedy"
+                        android:textColor="@color/dark_text"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:rotation="15"
+                            android:src="@drawable/ic_aeroplane"
+                            android:tint="@color/dark_text" />
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:text="19:55"
+                            android:textColor="@color/light_text"
+                            android:textSize="12sp"
+                            android:id="@+id/arrive_time_text"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/price_layout">
+
+
+            <RelativeLayout
+                android:id="@+id/from_container_2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/start_shorted_city_name_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="US"
+                        android:textColor="@color/dark_text"
+                        android:textSize="18sp" />
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/start_city_name_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="New York"
+                        android:textColor="@color/dark_text"
+                        android:textSize="14sp" />
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/start_airport_name_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="(JFK)John F Kennedy"
+                        android:textColor="@color/dark_text"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:rotation="345"
+                            android:src="@drawable/ic_aeroplane"
+                            android:tint="@color/dark_text" />
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:id="@+id/start_time_text_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:text="17:15"
+                            android:textColor="@color/light_text"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/to_container_2"
+                android:layout_toRightOf="@+id/from_container_2">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorAccent" />
+
+                <LinearLayout
+                    android:id="@+id/center_1_2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/gradient"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/center_2_2"
+                    android:layout_toRightOf="@+id/center_1_2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <include layout="@layout/dots" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <include layout="@layout/dots" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/center_2_2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/gradient"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/duration"
+                            android:textColor="@color/dark_text"
+                            android:textSize="12sp" />
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:text="7h 45m"
+                            android:textColor="@color/dark_text"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:id="@+id/duration_text_2"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Air Berlin"
+                            android:textColor="@color/dark_text"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:id="@+id/airline_name_2"/>
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:text="AB 7249"
+                            android:textColor="@color/dark_text"
+                            android:textSize="12sp"
+                            android:id="@+id/airline_code_2"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/to_container_2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/arrive_shorted_city_name_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="US"
+                        android:textColor="@color/dark_text"
+                        android:textSize="18sp" />
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/arrive_city_name_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="New York"
+                        android:textColor="@color/dark_text"
+                        android:textSize="12sp" />
+
+                    <design.nxn.flightbooking.customfonts.MyTextView
+                        android:id="@+id/arrive_airport_name_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text="(JFK)John F Kennedy"
+                        android:textColor="@color/dark_text"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:rotation="15"
+                            android:src="@drawable/ic_aeroplane"
+                            android:tint="@color/dark_text" />
+
+                        <design.nxn.flightbooking.customfonts.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:text="07:00"
+                            android:textColor="@color/light_text"
+                            android:textSize="12sp"
+                            android:id="@+id/arrive_time_text_2"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <design.nxn.flightbooking.Tools.CheckableLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/checkable_layout"
+        android:clickable="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <design.nxn.flightbooking.customfonts.MyTextView
+                android:id="@+id/selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/selected"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </design.nxn.flightbooking.Tools.CheckableLinearLayout>
+
+</RelativeLayout>

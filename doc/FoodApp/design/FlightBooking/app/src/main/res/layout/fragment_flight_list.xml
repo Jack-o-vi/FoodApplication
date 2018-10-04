@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="design.nxn.flightbooking.Fragments.FlightListFragment"
+    android:background="@color/white">
+
+    <design.nxn.flightbooking.Tools.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightest_gray">
+
+        <LinearLayout
+            android:id="@+id/list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </design.nxn.flightbooking.Tools.StickyScrollView>
+
+</RelativeLayout>

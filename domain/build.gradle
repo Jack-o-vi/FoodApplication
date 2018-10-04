@@ -1,0 +1,36 @@
+apply plugin: 'java'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    def domainExt = rootProject.ext
+
+//    lifecycleRuntime: "android.arch.lifecycle:runtime:${lifecycleVersion}",
+//    lifecycleExtensions: "android.arch.lifecycle:extensions:${lifecycleVersion}",
+//    lifecycleCompiler: "android.arch.lifecycle:compiler:${lifecycleVersion}",
+//    lifecycleCore: "android.arch.lifecycle:livedata-core:${lifecycleVersion}",
+//    implementation "javax.inject:javax.inject:${domainExt.javaxInjectVersion}"
+
+//    compileOnly "javax.annotation:javax.annotation-api:${domainExt.javaxAnnotationVersion}"
+//    implementation "com.google.dagger:dagger-compiler:${domainExt.daggerVersion}"
+//    implementation "com.google.dagger:dagger:${domainExt.daggerVersion}"
+//    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+
+
+    implementation "io.reactivex.rxjava2:rxjava:${domainExt.rxJavaVersion}"
+
+
+    // Test
+    testImplementation "junit:junit:${domainExt.jUnitVersion}"
+    testImplementation "org.mockito:mockito-core:${domainExt.mockitoVersion}"
+    testImplementation "org.assertj:assertj-core:${domainExt.assertJVersion}"
+}

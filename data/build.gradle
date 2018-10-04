@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "CONTENT_URI_AUTHORITY", "\"com.chisw.data.newsapp\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+
+    def dataDependencies = rootProject.ext
+
+    // Android Support, Design
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    annotationProcessor "com.google.dagger:dagger-compiler:${dataDependencies.daggerVersion}"
+    implementation "com.google.dagger:dagger:${dataDependencies.daggerVersion}"
+    compileOnly "javax.annotation:javax.annotation-api:${dataDependencies.javaxAnnotationVersion}"
+    implementation "javax.inject:javax.inject:${dataDependencies.javaxInjectVersion}"
+
+    implementation "com.squareup.okhttp3:okhttp:${dataDependencies.okHttpVersion}"
+    implementation "com.google.code.gson:gson:${dataDependencies.gsonVersion}"
+    implementation "io.reactivex.rxjava2:rxjava:${dataDependencies.rxJavaVersion}"
+    implementation "io.reactivex.rxjava2:rxandroid:${dataDependencies.rxAndroidVersion}"
+    implementation "com.android.support:support-annotations:${dataDependencies.supportLibraryVersion}"
+
+    // Domain
+    implementation project(path: ':domain')
+
+    // Tests libs
+    testImplementation "junit:junit:${dataDependencies.jUnitVersion}"
+    testImplementation "org.assertj:assertj-core:${dataDependencies.assertJVersion}"
+    testImplementation "org.mockito:mockito-core:${dataDependencies.mockitoVersion}"
+    testImplementation "org.robolectric:robolectric:${dataDependencies.robolectricVersion}"
+
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

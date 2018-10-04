@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context="design.nxn.flightbooking.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/airplane_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/center_1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/gradient"
+                android:orientation="horizontal"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/center_1">
+
+                <include layout="@layout/dots" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/airplane_image_1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_aeroplane"
+                android:visibility="visible"
+                android:background="@drawable/airplane_bg"
+                android:tint="@color/white"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/center_2">
+
+                <include layout="@layout/dots" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/center_2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/gradient"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/center_2">
+
+                <include layout="@layout/dots" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/airplane_image_2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_aeroplane"
+                android:visibility="gone"
+                android:background="@drawable/airplane_bg"
+                android:tint="@color/white"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/center_3">
+
+                <include layout="@layout/dots" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/center_3"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/gradient"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/center_3">
+
+                <include layout="@layout/dots" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/airplane_image_3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_aeroplane"
+                android:visibility="gone"
+                android:background="@drawable/airplane_bg"
+                android:tint="@color/white"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/center_4">
+
+                <include layout="@layout/dots" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/center_4"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/gradient"
+                android:orientation="horizontal" />
+
+            <ImageView
+                android:id="@+id/airplane_image_4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_aeroplane"
+                android:visibility="gone"
+                android:background="@drawable/gradient"
+                android:tint="@color/white"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation_layout"
+        android:layout_below="@+id/airplane_layout">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/navigation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/back"
+            android:onClick="backClick"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_left"
+            android:drawableTint="@color/white"
+            android:id="@+id/back_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/next" android:onClick="nextClick"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textColor="@color/white"
+            android:drawableRight="@drawable/ic_right"
+            android:drawableTint="@color/white"
+            android:id="@+id/next_button"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
