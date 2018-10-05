@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_food);
 
         etName = findViewById(R.id.etName);
         etSurname = findViewById(R.id.etSurname);

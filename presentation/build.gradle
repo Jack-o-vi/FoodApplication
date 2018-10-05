@@ -29,6 +29,8 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "com.android.support:appcompat-v7:${presentationExt.supportLibraryVersion}"
     implementation "com.android.support.constraint:constraint-layout:${presentationExt.constraintLibraryVersion}"
+    implementation "com.android.support:design:${presentationExt.supportLibraryVersion}"
+    implementation "com.android.support:recyclerview-v7:${presentationExt.supportLibraryVersion}"
 
 //    implementation "com.android.support:recyclerview-v7:${presentationExt.recyclerViewVersion}"
 //    androidAnnotations "com.android.support:support-annotations:${presentationExt.supportLibraryVersion}"
