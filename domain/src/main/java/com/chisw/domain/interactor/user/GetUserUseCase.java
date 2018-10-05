@@ -21,8 +21,8 @@ public class GetUserUseCase extends UseCase<GetUserUseCase.GetUserParameter, Get
     }
 
     @Override
-    protected Observable<GetUserUseCase.GetUserResult> createObservable(UseCase.UseCaseParameter params) {
-        return repository.getItems(((GetUserUseCase.GetUserParameter) params).getSpecification()).map(GetUserResult::new);
+    protected Observable<GetUserUseCase.GetUserResult> createObservable(GetUserParameter params) {
+        return repository.getItems(params.getSpecification()).map(GetUserResult::new);
     }
 
     public static class GetUserParameter implements UseCase.UseCaseParameter {

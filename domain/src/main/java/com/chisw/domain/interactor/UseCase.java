@@ -20,7 +20,7 @@ public abstract class UseCase<P extends UseCase.UseCaseParameter, T extends UseC
         this.postExecutionThread = postExecutionThread;
     }
 
-    protected abstract Observable<T> createObservable(UseCase.UseCaseParameter params);
+    protected abstract Observable<T> createObservable(P params);
 
     @Override
     public void execute(P params, Consumer<T> d) {

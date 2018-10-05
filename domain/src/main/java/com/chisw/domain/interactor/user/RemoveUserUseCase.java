@@ -13,7 +13,7 @@ public class RemoveUserUseCase extends UseCase<RemoveUserUseCase.RemoveUseCasePa
     }
 
     @Override
-    protected Observable<RemoveUseCaseResult> createObservable(UseCaseParameter params) {
+    protected Observable<RemoveUseCaseResult> createObservable(RemoveUseCaseParameter params) {
         return null;
     }
 

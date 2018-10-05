@@ -21,8 +21,8 @@ public class UpdateUserUseCase extends UseCase<UpdateUserUseCase.UpdateUserParam
     }
 
     @Override
-    protected Observable<UpdateUserResult> createObservable(UseCase.UseCaseParameter parameter) {
-        return repository.updateItems(((UpdateUserParameter) parameter).getUser(), ((UpdateUserParameter) parameter).getSpecification())
+    protected Observable<UpdateUserResult> createObservable(UpdateUserParameter parameter) {
+        return repository.updateItems(parameter.getUser(), parameter.getSpecification())
                 .map((row) -> new UpdateUserResult((Integer) row));
     }
 

@@ -20,8 +20,8 @@ public class AddUserUseCase extends UseCase<AddUserUseCase.AddUserParameter, Add
     }
 
     @Override
-    protected Observable<AddUserUseCase.AddUserResult> createObservable(UseCase.UseCaseParameter params) {
-        return repository.addItem(((AddUserUseCase.AddUserParameter )params).getSpecification()).map((a) -> new AddUserResult((long) a));
+    protected Observable<AddUserUseCase.AddUserResult> createObservable(AddUserParameter params) {
+        return repository.addItem(params.getSpecification()).map((a) -> new AddUserResult((long) a));
     }
 
     public static class AddUserParameter implements UseCase.UseCaseParameter {
